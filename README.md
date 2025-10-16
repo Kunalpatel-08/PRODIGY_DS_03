@@ -1,16 +1,14 @@
 # PRODIGY_DS_03
-Bank Marketing Decision Tree Classifier
 
+***Bank Marketing Decision Tree Classifier***
 
-Bank Marketing Decision Tree Classifier
-
-Overview
+**Overview**
 
 This project implements a Decision Tree Classifier to predict whether a customer will subscribe to a term deposit based on their demographic and behavioral data. The dataset used is the Bank Marketing dataset from the UCI Machine Learning Repository. The project is developed in a Jupyter Notebook using Python and includes data loading, preprocessing, model training, evaluation, and comparison of Decision Tree models using Gini and Entropy criteria.
 
 The goal is to accurately predict customer subscription to a term deposit using features like age, job, marital status, education, campaign contacts, and economic indicators.
 
-Dataset
+**Dataset**
 
 The dataset is the Bank Marketing dataset (bank-additional-full.csv), containing 41,188 records and 21 columns:
 
@@ -18,25 +16,25 @@ The dataset is the Bank Marketing dataset (bank-additional-full.csv), containing
 
 
 
-Demographic Features: age, job, marital, education
+**Demographic Features :** age, job, marital, education
 
 
 
-Behavioral Features: default, housing, loan, contact, month, day_of_week, duration, campaign, pdays, previous, poutcome
+**Behavioral Features :** default, housing, loan, contact, month, day_of_week, duration, campaign, pdays, previous, poutcome
 
 
 
-Economic Indicators: emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed
+**Economic Indicators :** emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed
 
 
 
-Target Variable: y (binary: "yes" for subscription, "no" otherwise)
+**Target Variable :** y (binary: "yes" for subscription, "no" otherwise)
 
-Source: UCI Machine Learning Repository - Bank Marketing Dataset
+**Source :** UCI Machine Learning Repository - Bank Marketing Dataset
 
+Original Source - https://archive.ics.uci.edu/dataset/222/bank+marketing
 
-
-Project Structure
+**Project Structure**
 
 
 
@@ -66,7 +64,7 @@ Performance comparison of Gini and Entropy models
 
 README.md: This file, providing project overview and instructions.
 
-Prerequisites
+**Prerequisites**
 
 The following Python libraries are required:
 
@@ -234,4 +232,4 @@ For questions or feedback, open an issue on this repository or contact [Kunal Pa
 
 
 
-Open in Colab: Click here to run the notebook in Google Colab
+Open in Colab: [Click here to run the notebook in Google Colab](https://colab.research.google.com/drive/1gfYtKWvZAqwd8FyxL4cTzd6DuhpaD2NZ#scrollTo=4064b6bb)
