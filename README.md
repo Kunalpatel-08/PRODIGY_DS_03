@@ -65,6 +65,8 @@ The goal is to accurately predict customer subscription to a term deposit using 
 ├── bank-additional-full.csv # Dataset (to be downloaded)
 └── README.md # Project overview and guide
 
+yaml
+Copy code
 
 ---
 
@@ -74,24 +76,18 @@ Install the required Python libraries before running the notebook:
 
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn plotly
-
-
 🚀 How to Run
 1️⃣ Download the Dataset
-
-Download bank-additional-full.csv from the UCI Repository
-.
+Download bank-additional-full.csv from the UCI Repository.
 
 Place it in your project folder or update the file path in the notebook.
 
 2️⃣ Set Up the Environment
-
 Open the notebook Decision_Tree_Classifier.ipynb in Jupyter Notebook, JupyterLab, or Google Colab.
 
 If using Google Colab, mount your Google Drive as shown in the notebook to access the dataset.
 
 3️⃣ Execute the Notebook
-
 Run all cells sequentially.
 
 Ensure the dataset path in pd.read_csv() is correct.
@@ -107,7 +103,6 @@ Evaluate models
 Display comparison results and visualizations
 
 📈 Expected Output
-
 Training and Testing Accuracy: ~93–94% for both Gini and Entropy models
 
 Model Visualizations:
@@ -119,16 +114,11 @@ ROC Curve and AUC
 Final Comparison Summary between both models
 
 🧠 Results and Insights
+Criterion	Training Accuracy	Testing Accuracy	Key Characteristic
+Gini	~93.6%	~93.3%	Higher recall for subscribers
+Entropy	~93.4%	~93.2%	More conservative (fewer false positives)
 
-| Criterion   | Training Accuracy | Testing Accuracy | Key Characteristic                        |
-| ----------- | ----------------: | ---------------: | ----------------------------------------- |
-| **Gini**    |            ~93.6% |           ~93.3% | Higher recall for subscribers             |
-| **Entropy** |            ~93.4% |           ~93.2% | More conservative (fewer false positives) |
-
-
-)
 🔍 Key Insights
-
 Both models generalize well with consistent train-test accuracy.
 
 Gini Criterion shows slightly better recall, making it more effective for identifying likely subscribers.
@@ -138,7 +128,6 @@ Entropy Criterion results in fewer false positives but may miss potential subscr
 ✅ Recommended Model: Gini Criterion — for balanced accuracy and recall, ideal for marketing target optimization.
 
 🪄 Visualizations
-
 Decision Tree structure (using Graphviz or Plotly)
 
 ROC Curves for Gini vs Entropy
@@ -146,26 +135,25 @@ ROC Curves for Gini vs Entropy
 Feature importance visualization
 
 📜 License
-
 This project is licensed under the MIT License.
 
 🙏 Acknowledgments
-
 Dataset: UCI Machine Learning Repository
 
 Tools used: Python, Scikit-learn, Pandas, Matplotlib, Seaborn, Plotly
 
 💬 Contact
-
 Kunal Patel
 📧 kunalpatel1538@gmail.com
-
 🌐 GitHub Profile
 
 ▶️ Open in Google Colab
-
 Click below to run the notebook directly in Google Colab:
 🔗 Open in Colab
 
+yaml
+Copy code
 
+---
 
+✅ Just paste this into your `README.md` file in GitHub — it will display perfectly formatted with headings, tables, and links.
