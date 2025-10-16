@@ -1,235 +1,171 @@
-# PRODIGY_DS_03
+# 🏦 PRODIGY_DS_03  
+### **Bank Marketing Decision Tree Classifier**
 
-***Bank Marketing Decision Tree Classifier***
+---
 
-**Overview**
+## 📘 Overview
 
-This project implements a Decision Tree Classifier to predict whether a customer will subscribe to a term deposit based on their demographic and behavioral data. The dataset used is the Bank Marketing dataset from the UCI Machine Learning Repository. The project is developed in a Jupyter Notebook using Python and includes data loading, preprocessing, model training, evaluation, and comparison of Decision Tree models using Gini and Entropy criteria.
+This project implements a **Decision Tree Classifier** to predict whether a customer will subscribe to a **term deposit** based on their **demographic** and **behavioral data**.  
+The dataset used is the **Bank Marketing dataset** from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/222/bank+marketing).
 
-The goal is to accurately predict customer subscription to a term deposit using features like age, job, marital status, education, campaign contacts, and economic indicators.
+The project is built in **Python** using **Jupyter Notebook** and includes:
 
-**Dataset**
+- Data loading and preprocessing  
+- Decision Tree model training using **Gini** and **Entropy** criteria  
+- Model evaluation using **Accuracy**, **ROC Curve**, and **AUC**  
+- Performance comparison between both criteria  
 
-The dataset is the Bank Marketing dataset (bank-additional-full.csv), containing 41,188 records and 21 columns:
+The goal is to accurately predict customer subscription to a term deposit using features like **age**, **job**, **marital status**, **education**, **campaign contacts**, and **economic indicators**.
 
+---
 
+## 📊 Dataset
 
+**Source:** [UCI Machine Learning Repository - Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing)  
+**File:** `bank-additional-full.csv`  
+**Records:** 41,188  
+**Columns:** 21  
 
+### 🔹 Demographic Features
+- `age`
+- `job`
+- `marital`
+- `education`
 
-**Demographic Features :** age, job, marital, education
+### 🔹 Behavioral Features
+- `default`
+- `housing`
+- `loan`
+- `contact`
+- `month`
+- `day_of_week`
+- `duration`
+- `campaign`
+- `pdays`
+- `previous`
+- `poutcome`
 
+### 🔹 Economic Indicators
+- `emp.var.rate`
+- `cons.price.idx`
+- `cons.conf.idx`
+- `euribor3m`
+- `nr.employed`
 
+### 🎯 Target Variable
+- `y` → binary classification (`yes` = subscribed, `no` = not subscribed)
 
-**Behavioral Features :** default, housing, loan, contact, month, day_of_week, duration, campaign, pdays, previous, poutcome
+---
 
+## 🧱 Project Structure
 
+📂 Bank_Marketing_DecisionTree/
+│
+├── Decision_Tree_Classifier.ipynb # Complete implementation notebook
+├── bank-additional-full.csv # Dataset (to be downloaded)
+└── README.md # Project overview and guide
 
-**Economic Indicators :** emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed
 
+---
 
+## ⚙️ Prerequisites
 
-**Target Variable :** y (binary: "yes" for subscription, "no" otherwise)
+Install the required Python libraries before running the notebook:
 
-**Source :** UCI Machine Learning Repository - Bank Marketing Dataset
-
-Original Source - https://archive.ics.uci.edu/dataset/222/bank+marketing
-
-**Project Structure**
-
-
-
-
-
-Decision_Tree_Classifier.ipynb: Jupyter Notebook with the complete implementation, including:
-
-
-
-
-
-Data loading and preprocessing
-
-
-
-Decision Tree Classifier training with Gini and Entropy criteria
-
-
-
-Model evaluation using accuracy, ROC curve, and AUC
-
-
-
-Performance comparison of Gini and Entropy models
-
-
-
-README.md: This file, providing project overview and instructions.
-
-**Prerequisites**
-
-The following Python libraries are required:
-
-
-
-
-
-pandas
-
-
-
-numpy
-
-
-
-scikit-learn
-
-
-
-matplotlib
-
-
-
-seaborn
-
-
-
-plotly
-
-Install them using:
-
+```bash
 pip install pandas numpy scikit-learn matplotlib seaborn plotly
 
-How to Run
 
+🚀 How to Run
+1️⃣ Download the Dataset
 
+Download bank-additional-full.csv from the UCI Repository
+.
 
+Place it in your project folder or update the file path in the notebook.
 
+2️⃣ Set Up the Environment
 
-Download the Dataset:
+Open the notebook Decision_Tree_Classifier.ipynb in Jupyter Notebook, JupyterLab, or Google Colab.
 
+If using Google Colab, mount your Google Drive as shown in the notebook to access the dataset.
 
+3️⃣ Execute the Notebook
 
+Run all cells sequentially.
 
-
-Download bank-additional-full.csv from the UCI Machine Learning Repository.
-
-
-
-Place it in the project directory or update the file path in the notebook.
-
-
-
-Set Up Environment:
-
-
-
-
-
-Open Decision_Tree_Classifier.ipynb in Jupyter Notebook, JupyterLab, or Google Colab.
-
-
-
-For Google Colab, mount your Google Drive to access the dataset (as shown in the notebook).
-
-
-
-Run the Notebook:
-
-
-
-
-
-Execute all cells in the notebook.
-
-
-
-Ensure the dataset path in pd.read_csv is correct.
-
-
+Ensure the dataset path in pd.read_csv() is correct.
 
 The notebook will:
 
-
-
-
-
 Load and preprocess the dataset
 
+Train models using Gini and Entropy
+
+Evaluate models
+
+Display comparison results and visualizations
+
+📈 Expected Output
+
+Training and Testing Accuracy: ~93–94% for both Gini and Entropy models
+
+Model Visualizations:
+
+Decision Tree Plot (if enabled)
+
+ROC Curve and AUC
+
+Final Comparison Summary between both models
+
+🧠 Results and Insights
+
+| Criterion   | Training Accuracy | Testing Accuracy | Key Characteristic                        |
+| ----------- | ----------------: | ---------------: | ----------------------------------------- |
+| **Gini**    |            ~93.6% |           ~93.3% | Higher recall for subscribers             |
+| **Entropy** |            ~93.4% |           ~93.2% | More conservative (fewer false positives) |
 
 
-Train Decision Tree models with Gini and Entropy criteria
+)
+🔍 Key Insights
 
+Both models generalize well with consistent train-test accuracy.
 
+Gini Criterion shows slightly better recall, making it more effective for identifying likely subscribers.
 
-Evaluate performance with accuracy, ROC curve, and AUC
+Entropy Criterion results in fewer false positives but may miss potential subscribers.
 
+✅ Recommended Model: Gini Criterion — for balanced accuracy and recall, ideal for marketing target optimization.
 
+🪄 Visualizations
 
-Display results and conclusions
+Decision Tree structure (using Graphviz or Plotly)
 
+ROC Curves for Gini vs Entropy
 
+Feature importance visualization
 
-Expected Output:
-
-
-
-
-
-Training and testing accuracies of ~93–94% for both Gini and Entropy models.
-
-
-
-Visualizations (e.g., decision tree plot, ROC curve) if enabled.
-
-
-
-Conclusion comparing Gini and Entropy, with Gini preferred for better recall.
-
-Results
-
-
-
-
-
-Model Performance:
-
-
-
-
-
-Both Gini and Entropy models achieve ~93–94% accuracy on training and testing datasets, indicating good generalization.
-
-
-
-Gini Criterion: Slightly higher testing accuracy and recall for the positive class ("yes"), making it more effective for identifying subscribers.
-
-
-
-Entropy Criterion: Fewer false positives but more false negatives, indicating a conservative approach.
-
-
-
-Key Insight: The Gini-based model is recommended for its balanced accuracy and recall, ideal for targeting potential subscribers.
-
-License
+📜 License
 
 This project is licensed under the MIT License.
 
-Acknowledgments
+🙏 Acknowledgments
+
+Dataset: UCI Machine Learning Repository
+
+Tools used: Python, Scikit-learn, Pandas, Matplotlib, Seaborn, Plotly
+
+💬 Contact
+
+Kunal Patel
+📧 kunalpatel1538@gmail.com
+
+🌐 GitHub Profile
+
+▶️ Open in Google Colab
+
+Click below to run the notebook directly in Google Colab:
+🔗 Open in Colab
 
 
 
-
-
-Dataset provided by the UCI Machine Learning Repository.
-
-
-
-Built with Python, Scikit-learn, Pandas, and visualization libraries.
-
-Contact
-
-For questions or feedback, open an issue on this repository or contact [Kunal Patel/kunalpatel1538@gmail.com/https://github.com/Kunalpatel-08].
-
-
-
-Open in Colab: [Click here to run the notebook in Google Colab](https://colab.research.google.com/drive/1gfYtKWvZAqwd8FyxL4cTzd6DuhpaD2NZ#scrollTo=4064b6bb)
